@@ -26,7 +26,8 @@ public class StarDataAdapter extends ArrayAdapter<CommonDetailOfEachStar>
 	 private final Activity activity;
 	 
 	    private final List<CommonDetailOfEachStar> stars;
-	    public LazyLoadingOfImages imageLoader;
+	    //Creating Object for the class
+       public LazyLoadingOfImages imageLoader;
 	    double longitudeAddress,latitudeAddress;
 	  
 	    public StarDataAdapter(Activity activity,int resource, List<CommonDetailOfEachStar> objects) {
@@ -69,8 +70,8 @@ public class StarDataAdapter extends ArrayAdapter<CommonDetailOfEachStar>
 	        sqView.name.setText(stardata.getSname());
 	        sqView.name.setTextColor(Color.rgb(248, 223, 144));
 	        sqView.addr.setText(stardata.getAdress());
-	        
-	        imageLoader.DisplayImage(stardata.getPicture(), sqView.img);
+	        //passing the image url and the image view to display image method and setting tha apt image to the image view
+	        imageLoader.DisplayImage(stardata.getPicture(), sqView.img); 
 	        sqView.img.setPadding(2, 2, 2, 2);
 	        sqView.ll.setBackgroundDrawable(rowView.getResources().getDrawable(R.drawable.shape1));
 	        sqView.lll.setBackgroundDrawable(rowView.getResources().getDrawable(R.drawable.shape1));
